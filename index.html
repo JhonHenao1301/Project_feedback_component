@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,700&family=Inter:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Feedback component</title>
+</head>
+<body>
+    <main>
+        <section class="main-card">
+            <div class="wrapper">
+                <div class="card-form card">
+                    <div class="card-content">
+                        <h1>¿Qué te ha parecido el curso?</h1>
+                        <p>Nos importa mucho tu opinión para seguir mejorando el contenido y experiencia de la plataforma.</p>
+                        <div class="card-selection-list">
+                            <button><span>1</span></button>
+                            <button><span>2</span></button>
+                            <button><span>3</span></button>
+                            <button><span>4</span></button>
+                            <button><span>5</span></button>
+                        </div>
+                    </div>
+                    <button class="btn-sent" id="#btn-sent" onclick="send()">Enviar respuesta</button>
+                </div>
+                <div class="card-message card hidden">
+                    <img src="./assets/last-message.png" alt="">
+                    <div class="card-content">
+                        <h1>Gracias por tu apoyo</h1>
+                        <p>Trabajaremos en conjunto para mejorar cada día gracias a tu apoyo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const btn = document.querySelector("#btn-sent")
+
+        function send() {
+            const card1 = document.querySelector(".card-form")
+            const card2 = document.querySelector(".card-message")
+
+            card1.classList.add("hidden");
+            card2.classList.remove("hidden");
+        }
+
+
+    </script>
+    
+</body>
+</html>
